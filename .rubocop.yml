@@ -11,6 +11,7 @@
 
 require:
   - rubocop-rspec
+  - rubocop-performance
 
 AllCops:
   NewCops: enable
@@ -23,3 +24,21 @@ Style/MultilineBlockChain:
 
 Layout/LineLength:
   Max: 100
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Metrics/AbcSize:
+  CountRepeatedAttributes: false
+
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/ExampleLength:
+  Max: 10
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Performance/MethodObjectAsBlock:
+  Enabled: false
