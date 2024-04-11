@@ -2,7 +2,5 @@
 
 module VendingMachine
   class Application
-    def initialize
-    end
   end
 end
