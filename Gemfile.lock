@@ -2,16 +2,32 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    debug (1.9.2)
+      irb (~> 1.10)
+      reline (>= 0.3.8)
     diff-lcs (1.5.1)
+    docile (1.4.0)
+    highline (3.0.1)
+    io-console (0.7.2)
+    irb (1.12.0)
+      rdoc
+      reline (>= 0.4.2)
     json (2.7.2)
     language_server-protocol (3.17.0.3)
     parallel (1.24.0)
     parser (3.3.0.5)
       ast (~> 2.4.1)
       racc
+    prism (0.24.0)
+    psych (5.1.2)
+      stringio
     racc (1.7.3)
     rainbow (3.1.1)
+    rdoc (6.6.3.1)
+      psych (>= 4.0.0)
     regexp_parser (2.9.0)
+    reline (0.5.1)
+      io-console (~> 0.5)
     rexml (3.2.6)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -43,6 +59,9 @@ GEM
       rubocop (~> 1.41)
     rubocop-factory_bot (2.25.1)
       rubocop (~> 1.41)
+    rubocop-performance (1.21.0)
+      rubocop (>= 1.48.1, < 2.0)
+      rubocop-ast (>= 1.31.1, < 2.0)
     rubocop-rspec (2.29.1)
       rubocop (~> 1.40)
       rubocop-capybara (~> 2.17)
@@ -50,7 +69,19 @@ GEM
       rubocop-rspec_rails (~> 2.28)
     rubocop-rspec_rails (2.28.2)
       rubocop (~> 1.40)
+    ruby-lsp (0.16.3)
+      language_server-protocol (~> 3.17.0)
+      prism (>= 0.22.0, < 0.25)
+      sorbet-runtime (>= 0.5.10782)
     ruby-progressbar (1.13.0)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.12.3)
+    simplecov_json_formatter (0.1.4)
+    sorbet-runtime (0.5.11340)
+    stringio (3.1.0)
     unicode-display_width (2.5.0)
 
 PLATFORMS
@@ -58,9 +89,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  debug
+  highline
   rspec
   rubocop
+  rubocop-performance
   rubocop-rspec
+  ruby-lsp
+  simplecov
 
 BUNDLED WITH
    2.5.3

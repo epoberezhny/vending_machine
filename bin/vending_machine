@@ -1,3 +1,17 @@
 #!/usr/bin/env ruby
 
 # frozen_string_literal: true
+
+require_relative '../lib/vending_machine'
+
+machine = VendingMachine::Machine.new
+
+machine.add_product(name: 'Snickers', quantity: 3, price: 3.5)
+machine.add_product(name: 'Mars', quantity: 2, price: 2.5)
+machine.add_product(name: 'Twix', quantity: 5, price: 4.0)
+
+machine.add_coin(coin: 3.0, amount: 1)
+machine.add_coin(coin: 2.0, amount: 10)
+machine.add_coin(coin: 0.25, amount: 3)
+
+VendingMachine::Console.new(machine:).run

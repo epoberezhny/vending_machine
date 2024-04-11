@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+ENV['APP_ENV'] ||= 'test'
+
+require 'simplecov'
+SimpleCov.start do
+  enable_coverage :branch
+end
+
 require 'rspec'
 require_relative '../lib/vending_machine'
 
